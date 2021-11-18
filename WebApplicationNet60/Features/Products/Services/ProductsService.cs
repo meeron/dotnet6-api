@@ -16,9 +16,13 @@ public class ProductsService : IProductsService
     {
         await Task.CompletedTask;
 
+        var orange = Product("Orange");
+        orange.AddRating(5, "I love oranges");
+        orange.AddRating(2);
+
         return new Product[]
         {
-            Product("Orange"),
+            orange,
             Product("XBox Series X"),
         };
     }
